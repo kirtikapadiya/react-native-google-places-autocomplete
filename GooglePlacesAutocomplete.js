@@ -299,13 +299,12 @@ export const GooglePlacesAutocomplete = forwardRef((props, ref) => {
       };
 
       request.open(
-        'GET',
-        `${url}/place/details/json?` +
+         'GET',
+         `${url}/geocode/json?` +
           Qs.stringify({
+            address: rowData.description,
             key: props.query.key,
-            placeid: rowData.place_id,
-            language: props.query.language,
-            ...props.GooglePlacesDetailsQuery,
+            ...props.GoogleReverseGeocodingQuery,
           }),
       );
 
