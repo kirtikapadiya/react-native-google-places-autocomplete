@@ -300,6 +300,10 @@ interface Geometry {
     northeast: Point;
     southwest: Point;
   };
+  bounds: {
+    northeast: Point;
+    southwest: Point;
+  };
 }
 
 interface PlusCode {
